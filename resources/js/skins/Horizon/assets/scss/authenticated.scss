@@ -1,0 +1,7 @@
+&.authenticated {
+    .the-header {
+        &:after {
+            background-position: top -190px center;
+        }
+    }
+}

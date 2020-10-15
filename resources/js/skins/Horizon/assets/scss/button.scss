@@ -1,0 +1,54 @@
+.ac-btn {
+    &.ac-btn-green {
+        background: rgb(36,157,47);
+        border:2px solid #fff;
+        color:#fff;
+        background: linear-gradient(180deg, $horizon-gradient-2-colour-1 0%, $horizon-gradient-2-colour-1 50%, $horizon-gradient-2-colour-2 50%, $horizon-gradient-2-colour-2 100%);
+        &.ac-btn-enter {
+            border-top:0;
+            border-bottom:0;
+            box-shadow: inset 0 0 0 2px $horizon-gradient-2-colour-2;
+            border-radius: 0;;
+        }
+    }
+}
+.btn {
+    position: relative;
+    box-shadow: inset 0 2px rgba(255,255,255,.3),inset 0 -2px rgba(0,0,0,.4), 0 4px rgba(0,0,0,.3);
+    &.btn-xl {
+        padding:0.3rem 1rem;
+        font-size:22px;
+    }
+    &.login {
+        padding-left: 55px;
+        .icon {
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url($assets + "/ghost.png");
+                width: 60px;
+                height: 80px;
+                top: -30px;
+                bottom: 6px;
+                margin: auto;
+                left: 0;
+            }
+        }
+    }
+    &.register {
+        padding-right: 55px;
+        background-image: url($assets + "/head_plus.png");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+    }
+    .avatar {
+        overflow: hidden;
+        position: absolute;
+        left:-13px;
+        top:-30px;
+        bottom:8px;
+        width: 60px;
+        height: 80px;
+        margin: auto;
+    }
+}
