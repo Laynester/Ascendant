@@ -33,13 +33,15 @@
             id="dropdown-1"
             variant="primary btn-xl"
             text="Dropdown Button"
-            v-if="$store.state.token"
+            v-if="$store.state.token && $store.state.user"
           >
             <template v-slot:button-content>
               <div class="avatar">
-                <img :src="$config.habbo_imager + ''" />
+                <img :src="$config.habbo_imager + $store.state.user.look" />
               </div>
-              <span class="text-shadow-horizon-1 ml-4">Layne</span>
+              <span class="text-shadow-horizon-1 ml-4">{{
+                $store.state.user.username
+              }}</span>
             </template>
             <b-dropdown-item>First Action</b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>

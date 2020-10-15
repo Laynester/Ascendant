@@ -10,6 +10,7 @@ $router->group(['prefix' => 'api'], function ($router) {
 
     $router->group(['prefix' => 'user'], function ($router) {
         $router->get('fetch/{username}', 'UserController@user');
+        $router->get('me', 'UserController@me');
     });
 
     $router->group(['prefix' => 'page'], function ($router) {

@@ -7,7 +7,8 @@ export default {
         token: localStorage.getItem("token") || "",
         pageTemplate: null,
         pageContent: [],
-        news: null
+        news: { articles: null, featured: null },
+        user: null
     },
     mutations: {
         SET_LAYOUT(state, payload) {
@@ -18,14 +19,28 @@ export default {
             localStorage.setItem("token", payload);
             API.defaults.headers.common["Authorization"] = "Bearer " + payload;
         },
+        clearToken(state, payload) {
+            state.token = null;
+            localStorage.removeItem('token');
+            API.defaults.headers.common["Authorization"] = null;
+        },
+        setUser(state, payload) {
+            state.user = payload
+        },
         pageTemplate(state, payload) {
             state.pageTemplate = payload;
         },
-        setIndex(state, i) {
-            state.pageContent[i] = []
+        setIndex(state, payload) {
+            state.pageContent[payload] = []
         },
-        contentPush(state, p) {
-            state.pageContent[p.index].push(p.element);
+        contentPush(state, payload) {
+            state.pageContent[payload.index].push(payload.element);
+        },
+        setNews(state, payload) {
+            state.news.articles = payload
+        },
+        setNewsFeatured(state, payload) {
+            state.news.featured = payload
         }
     },
     getters: {
@@ -36,5 +51,10 @@ export default {
             return state.layout;
         },
     },
-    actions: {},
+    actions: {
+        login(context, payload) {
+            context.commit('SET_TOKEN', payload.token)
+            context.commit('setUser', payload.user)
+        }
+    },
 };

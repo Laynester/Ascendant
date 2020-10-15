@@ -1,0 +1,9 @@
+div#Example {
+    @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+    .app {
+        font-family: 'Rubik', sans-serif;
+        overflow-y: auto;
+    }
+    @import "~bootstrap/scss/bootstrap";
+    @import '~bootstrap-vue/src/index.scss';
+}

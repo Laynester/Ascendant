@@ -17,7 +17,7 @@ export default {
         .post("/authentication/login", this.form)
         .then((data) => {
           if (data.data.token) {
-            this.$store.commit("SET_TOKEN", data.data.token);
+            this.$store.dispatch("login", data.data);
             this.$bvToast.toast(`Welcome Back! ${data.data.user.username}`, {
               title: "Success",
               autoHideDelay: 5000,
