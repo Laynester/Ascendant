@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <title>Vue and Lumen</title>
     <link rel="stylesheet" href="dist/app.css" />
+    <script>
+    window.config={
+        "theme": "{{$config[4]->value}}",
+        "logo_small": "{{$config[1]->value}}",
+        "logo_big": "{{$config[2]->value}}",
+        "hotel_name": "{{$config[0]->value}}",
+        "habbo_imager": "{{$config[3]->value}}"
+        };
+</script>
 </head>
-<body class="h-100">
+<body class="h-100" id="{{$config[4]->value}}">
     <div id="app"></div>
     <script src="dist/app.js"></script>
     @if(config('app.env') == 'local')

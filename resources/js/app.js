@@ -1,6 +1,5 @@
 import Vue from "vue";
 import router from "./router";
-import config from "./config.json";
 import App from "./App.vue";
 import store from "./store";
 import API from "./api";
@@ -8,7 +7,7 @@ import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 
 const token = localStorage.getItem("token");
 
-Vue.prototype.$config = config;
+Vue.prototype.$config = window.config;
 Vue.prototype.$store = store;
 Vue.prototype.$api = API;
 

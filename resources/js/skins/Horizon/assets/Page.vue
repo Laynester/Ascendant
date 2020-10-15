@@ -9,7 +9,11 @@ export default {
         .get("user/me")
         .then((e) => {
           let user = e.data.user;
-          this.$store.commit("setUser", user);
+          if (e.data.user) {
+            this.$store.commit("setUser", user);
+          } else {
+            this.$store.commit("clearToken", null);
+          }
         })
         .catch((e) => {
           this.$store.commit("clearToken", null);

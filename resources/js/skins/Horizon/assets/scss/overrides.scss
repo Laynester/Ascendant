@@ -1,6 +1,5 @@
 .navbar-nav {
     .nav-item {
-
        .nav-link {
            font-size: 22px;
             color:#fff;
@@ -9,6 +8,7 @@
 }
 .card {
     background:#CBD1D7;
+    border-radius:0;
     &.news-card {
         height:200px;
         background-position: left -200px center;
@@ -20,7 +20,8 @@
         }
     }
     .card-header {
-        
+        background:#1C7293;
+        color:#fff;
     }
 }
 

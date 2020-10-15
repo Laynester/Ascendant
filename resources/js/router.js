@@ -3,7 +3,6 @@ import VueRouter from "vue-router";
 import skins from "./skins";
 import store from "./store";
 import middlewarePipeline from "./middlewarePipeline";
-import config from "./config.json";
 import api from './api';
 import { templateFilter, component } from './functions'
 
@@ -45,7 +44,7 @@ router.beforeEach(async (to, from, next) => {
         .find((r) => r.meta && r.meta.middleware);
 
     if (nearestWithTitle) {
-        document.title = `${config.hotel_name} - ${nearestWithTitle.meta.title}`;
+        document.title = `${window.config.hotel_name} - ${nearestWithTitle.meta.title}`;
     }
 
     if (!nearestMiddleware.meta.middleware) {

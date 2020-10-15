@@ -25,5 +25,6 @@ $router->group(['prefix' => 'api'], function ($router) {
 });
 
 $router->get('/{route:.*}/', function ()  {
-    return view('app');
+    $config = \App\Models\cms_config::get();
+    return view('app',['config'=>$config]);
 });
