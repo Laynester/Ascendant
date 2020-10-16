@@ -1,4 +1,5 @@
 import API from "../../api";
+import router from '../../router'
 
 export default {
     state: {
@@ -55,6 +56,12 @@ export default {
         login(context, payload) {
             context.commit('SET_TOKEN', payload.token)
             context.commit('setUser', payload.user)
-        }
+        },
+        news(context, payload) {
+            router.push({
+                name: 'Articles',
+                params: { id: payload.id + '-' + payload.caption.split(' ').join('-') },
+            })
+        },
     },
 };

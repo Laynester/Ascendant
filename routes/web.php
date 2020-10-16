@@ -24,7 +24,4 @@ $router->group(['prefix' => 'api'], function ($router) {
 
 });
 
-$router->get('/{route:.*}/', function ()  {
-    $config = \App\Models\cms_config::get();
-    return view('app',['config'=>$config]);
-});
+$router->get('{any:.*}', 'SiteController@app');

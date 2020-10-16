@@ -26,7 +26,7 @@ export default [
     },
     {
         name: "Articles",
-        path: "/articles",
+        path: "/articles/:id?",
         component: Page,
         meta: {
             title: "Articles",

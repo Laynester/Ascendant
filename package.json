@@ -27,6 +27,7 @@
     "dependencies": {
         "bootstrap-vue": "^2.16.0",
         "material-design-icons": "^3.0.1",
+        "moment": "^2.29.1",
         "vue-material-design-icons": "^4.6.0",
         "vue-router": "^3.4.3",
         "vuejs-service-container": "^1.1.1",

@@ -9,19 +9,12 @@
 .card {
     background:#CBD1D7;
     border-radius:0;
-    &.news-card {
-        height:200px;
-        background-position: left -200px center;
-        transition: all .3s ease-in-out;
-        background-color:#000;
-        image-rendering: pixelated;
-        .card-img-overlay {
-            padding:0.7rem
-        }
-    }
+    border:1px solid #283F5D;
     .card-header {
         background:#1C7293;
         color:#fff;
+        border-radius:0;
+        border-bottom:1px solid #283F5D
     }
 }
 
@@ -64,5 +57,13 @@ form {
             border: 1px solid #5E6166;
             box-shadow: inset 0 2px rgba($black,.2);
         }
+    }
+}
+a {
+    &.user {
+        background-image: url($assets+'icons/people.gif');
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left:25px;
     }
 }

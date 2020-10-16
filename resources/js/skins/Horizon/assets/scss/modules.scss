@@ -1,0 +1,24 @@
+.card {
+    &.news-card {
+        height:200px;
+        background-position: left -200px center;
+        transition: all .3s ease-in-out;
+        background-color:#000;
+        image-rendering: pixelated;
+        .card-img-overlay {
+            padding:0.7rem
+        }
+    }
+    &.uotw-card {
+        height:225px;
+        background-color:#84CEEF;
+        background-image:url($assets + 'uotw.png');
+        background-position: left -30px bottom;
+        background-repeat: no-repeat;
+        .avatar {
+            position: absolute;
+            left:93px;
+            bottom:38px;
+        }
+    }
+}

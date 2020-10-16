@@ -4,6 +4,7 @@ import App from "./App.vue";
 import store from "./store";
 import API from "./api";
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
+import moment from 'moment'
 
 const token = localStorage.getItem("token");
 
@@ -18,6 +19,10 @@ if (token) {
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons)
+
+Vue.filter('date', function (date) {
+    return moment.unix(date).format('D/M/YY');
+})
 
 new Vue({
     router,

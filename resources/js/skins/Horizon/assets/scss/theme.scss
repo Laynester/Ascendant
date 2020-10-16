@@ -8,6 +8,7 @@
     @import "~bootstrap/scss/bootstrap";
     @import '~bootstrap-vue/src/index.scss';
     @import './overrides.scss';
+    @import './modules.scss';
     font-family: 'Rubik', sans-serif;
     .app {
         overflow-y: auto;

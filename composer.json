@@ -6,7 +6,12 @@
     "type": "project",
     "require": {
         "php": "^7.3",
+        "hwi/oauth-bundle": "^1.1",
+        "illuminate/redis": "^8.10",
         "laravel/lumen-framework": "^8.0",
+        "php-http/guzzle6-adapter": "^2.0",
+        "php-http/httplug-bundle": "^1.18",
+        "rennokki/laravel-eloquent-query-cache": "^2.4",
         "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {

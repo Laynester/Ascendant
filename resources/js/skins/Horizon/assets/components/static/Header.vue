@@ -31,7 +31,7 @@
           </button>
           <b-dropdown
             id="dropdown-1"
-            variant="primary btn-xl"
+            variant="primary btn-xl pl-4"
             text="Dropdown Button"
             v-if="$store.state.token && $store.state.user"
           >
